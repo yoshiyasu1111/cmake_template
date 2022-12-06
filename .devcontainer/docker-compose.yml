@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  embeddedcxx:
+    image: embeddedcxx
+    container_name: embeddedcxx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ${PWD}:/work
+    working_dir: /work
+    tty: true
+    command: /bin/bash
+  
